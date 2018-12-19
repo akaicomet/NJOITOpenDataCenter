@@ -63,3 +63,5 @@ def PensionMembersMerge(_data1,_data2):
 
     _data1.loc[_data1.veteran_status == 'YES', 'veteran_status'] = 1  
     _data1.loc[_data1.veteran_status == 'NO', 'veteran_status'] = 0 
+	
+    return ActivePension_df2	
