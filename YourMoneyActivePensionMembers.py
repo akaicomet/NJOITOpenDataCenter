@@ -1,7 +1,7 @@
 def ActivePensionDataWrangler(_data):
     ActivePension_df = pd.DataFrame.from_records(_data)
     ActivePension_df = ActivePension_df.drop_duplicates(ActivePension_df)
-    ActivePension_df = ActivePension_df['member_mi'].fillna('')
+    ActivePension_df['member_mi'].fillna('')
     ActivePension_df = ActivePension_df.drop_duplicates(['_20_year_status','employer_name','enrollment_date','location_code','location_name','member_first_name','member_last_name','member_mi','membership_tier','pension_fund_id','pension_fund_name','pension_group_id','pension_group_name','service_months_qty','service_years_qty','total_months_qty','veteran_status'],keep='last')
     ActivePension_df= ActivePension_df.sort_values(['member_first_name','member_mi','member_last_name','enrollment_date']) 
     ActivePension_df_grped = ActivePension_df[['member_first_name','member_mi','member_last_name','enrollment_date','employer_name','pension_fund_id','current_employer_salary_amt']]
