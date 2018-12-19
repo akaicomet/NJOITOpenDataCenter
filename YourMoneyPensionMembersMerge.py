@@ -58,10 +58,13 @@ def PensionMembersMerge(_data1,_data2):
         how='left'
     )
 
-    _data1.loc[_data1._20_year_status == 'YES', '_20_year_status'] = 1  
-    _data1.loc[_data1._20_year_status == 'NO', '_20_year_status'] = 0  
+    _data1.loc[_data1._20_year_status == 'YES', '_20_year_status'] = '1'  
+    _data1.loc[_data1._20_year_status == 'NO', '_20_year_status'] = '0'  
 
-    _data1.loc[_data1.veteran_status == 'YES', 'veteran_status'] = 1  
-    _data1.loc[_data1.veteran_status == 'NO', 'veteran_status'] = 0 
+    _data1.loc[_data1.veteran_status == 'YES', 'veteran_status'] = '1'  
+    _data1.loc[_data1.veteran_status == 'NO', 'veteran_status'] = '0'
 	
-    return ActivePension_df2	
+    RetiredPension_df_grped['_20_year_status'] = RetiredPension_df_grped['_20_year_status'].astype('int32')	
+    RetiredPension_df_grped['veteran_status'] = RetiredPension_df_grped['veteran_status'].astype('int32')
+	
+    return _data1	
