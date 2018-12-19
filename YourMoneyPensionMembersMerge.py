@@ -84,4 +84,8 @@ def PensionMembersMerge(_data1,_data2):
     _data1['veteran_status'] = _data1['veteran_status'].astype(str)	
     _data1['member_middle_initial'] = _data1['member_middle_initial'].astype(str)
 
+    #pension paid members statistic	
+    _data1['pension_fund_name_enc'] = _data1.groupby('pension_fund_name')['IsPensionPaid'].transform('mean')
+    _data1['pension_group_name_enc'] = _data1.groupby('pension_group_id')['IsPensionPaid'].transform('mean')
+
     return _data1	
