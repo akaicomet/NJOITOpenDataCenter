@@ -64,7 +64,7 @@ def PensionMembersMerge(_data1,_data2):
     _data1.loc[_data1.veteran_status == 'YES', 'veteran_status'] = '1'  
     _data1.loc[_data1.veteran_status == 'NO', 'veteran_status'] = '0'
 	
-    RetiredPension_df_grped['_20_year_status'] = RetiredPension_df_grped['_20_year_status'].astype('int64')	
-    RetiredPension_df_grped['veteran_status'] = RetiredPension_df_grped['veteran_status'].astype('int64')
+    #RetiredPension_df_grped['_20_year_status'] = RetiredPension_df_grped['_20_year_status'].astype('int64')	
+    #RetiredPension_df_grped['veteran_status'] = RetiredPension_df_grped['veteran_status'].astype('int64')
 	
     return _data1	
