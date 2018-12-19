@@ -64,7 +64,24 @@ def PensionMembersMerge(_data1,_data2):
     _data1.loc[_data1.veteran_status == 'YES', 'veteran_status'] = '1'  
     _data1.loc[_data1.veteran_status == 'NO', 'veteran_status'] = '0'
 	
-    #RetiredPension_df_grped['_20_year_status'] = RetiredPension_df_grped['_20_year_status'].astype('int64')	
-    #RetiredPension_df_grped['veteran_status'] = RetiredPension_df_grped['veteran_status'].astype('int64')
-	
+    RetiredPension_df_grped['_20_year_status'] = RetiredPension_df_grped['_20_year_status'].astype(int)	
+    RetiredPension_df_grped['veteran_status'] = RetiredPension_df_grped['veteran_status'].astype(int)
+    RetiredPension_df_grped['all_employers_salary_amt'] = RetiredPension_df_grped['all_employers_salary_amt'].astype(float)	
+    RetiredPension_df_grped['current_employer_salary_amt'] = RetiredPension_df_grped['current_employer_salary_amt'].astype(float)	
+    RetiredPension_df_grped['employer_name'] = RetiredPension_df_grped['employer_name'].astype(str)	
+    RetiredPension_df_grped['location_code'] = RetiredPension_df_grped['location_code'].astype(int)
+    RetiredPension_df_grped['location_name'] = RetiredPension_df_grped['location_name'].astype(str)	
+    RetiredPension_df_grped['member_first_name'] = RetiredPension_df_grped['member_first_name'].astype(str)
+    RetiredPension_df_grped['member_last_name'] = RetiredPension_df_grped['member_last_name'].astype(str)
+    RetiredPension_df_grped['member_mi'] = RetiredPension_df_grped['member_mi'].astype(str)
+    RetiredPension_df_grped['membership_tier'] = RetiredPension_df_grped['membership_tier'].astype(int)
+    RetiredPension_df_grped['pension_fund_id'] = RetiredPension_df_grped['pension_fund_id'].astype(int)
+    RetiredPension_df_grped['pension_fund_name'] = RetiredPension_df_grped['pension_fund_name'].astype(str)	
+    RetiredPension_df_grped['pension_group_id'] = RetiredPension_df_grped['pension_group_id'].astype(int)
+    RetiredPension_df_grped['service_months_qty'] = RetiredPension_df_grped['service_months_qty'].astype(int)
+    RetiredPension_df_grped['service_years_qty'] = RetiredPension_df_grped['service_years_qty'].astype(int)	
+    RetiredPension_df_grped['total_months_qty'] = RetiredPension_df_grped['total_months_qty'].astype(int)	
+    RetiredPension_df_grped['veteran_status'] = RetiredPension_df_grped['veteran_status'].astype(str)	
+    RetiredPension_df_grped['member_middle_initial'] = RetiredPension_df_grped['member_middle_initial'].astype(str)
+
     return _data1	
