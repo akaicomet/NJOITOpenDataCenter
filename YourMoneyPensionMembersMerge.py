@@ -77,7 +77,7 @@ def PensionMembersMerge(_data1,_data2):
     _data1['membership_tier'] = _data1['membership_tier'].astype(int)
     _data1['pension_fund_id'] = _data1['pension_fund_id'].astype(int)
     _data1['pension_fund_name'] = _data1['pension_fund_name'].astype(str)	
-    _data1['pension_group_id'] = _data1['pension_group_id'].astype(int)
+    #_data1['pension_group_id'] = _data1['pension_group_id'].astype(int)
     _data1['service_months_qty'] = _data1['service_months_qty'].astype(int)
     _data1['service_years_qty'] = _data1['service_years_qty'].astype(int)	
     _data1['total_months_qty'] = _data1['total_months_qty'].astype(int)	
