@@ -1,3 +1,4 @@
+@exception
 def RetiredPensionMembersDataWrangler(_data):
     RetiredPension_df = pd.DataFrame.from_records(_data)
     #replace 'NA'
