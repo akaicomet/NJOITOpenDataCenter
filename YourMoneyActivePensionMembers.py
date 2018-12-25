@@ -1,3 +1,4 @@
+@exception
 def ActivePensionDataWrangler(_data):
     ActivePension_df = pd.DataFrame.from_records(_data)
     #remove duplicate
