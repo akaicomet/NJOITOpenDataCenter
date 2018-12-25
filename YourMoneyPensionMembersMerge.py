@@ -1,3 +1,4 @@
+@exception
 def PensionMembersMerge(_data1,_data2):
     _data1 = pd.merge(
         left=_data1, 
