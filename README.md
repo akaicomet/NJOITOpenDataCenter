@@ -1,0 +1,2 @@
+# NJOITOpenDataCenter
+Governor Christie’s 2010 YourMoney web site was a groundbreaking (and award‐winning) enabler of government transparency. It delivered to the public, for the first time, formal and consistent access to the State’s financial‐ related data. The Open Data Center (ODC) extends this capability to all State data – not just financial data. Data is also better organized and described.
